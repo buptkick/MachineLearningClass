@@ -703,13 +703,13 @@
 
 ### 进行完整的人脸识别实验 ###
 
-#### 运行align-dlib.py进行仿射变换 ####
+#### 运行`align-dlib.py`进行仿射变换 ####
 
 1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
 		/root/openface/util/align-dlib.py /home/bupt/training-images/ align outerEyesAndNose /home/bupt/aligned-images/ --size 96
 
-1.	运行以上命令之后可在/home/bupt/aligned-images目录下找到仿射变换后的图片文件：
+1.	运行以上命令之后可在`/home/bupt/aligned-images`目录下找到仿射变换后的图片文件：
 
 	![](https://i.imgur.com/h08HjNS.png)
 
@@ -741,7 +741,7 @@
 
 		/root/openface/demos/classifier.py infer /home/bupt/generated-embeddings/classifier.pkl your_test_image_fullpath.jpg
 
-1.	运行以上命令之后会在Terminal命令窗口中显示如下识别结果：
+1.	运行以上命令之后会在`Terminal`命令窗口中显示如下识别结果：
 
 	![](https://i.imgur.com/MpfSDla.png)
 
