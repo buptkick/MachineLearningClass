@@ -64,7 +64,9 @@
 
 ## 实验目标 ##
 
--	了解机器学习的基本概念，了解机器学习的应用方法。通过实验掌握机器学习预测任务的基本流程。
+-	了解机器学习的基本概念，了解机器学习的应用方法。
+
+-	通过实验掌握机器学习预测任务的基本流程。
 
 ## 实验器材及准备 ##
 
@@ -75,7 +77,6 @@
 -	软件：Ubuntu、Anaconda3 5.0.1、Scikit-learn 0.19及其依赖包
 
 ### 实验准备 ###
-
 
 -	查阅机器学习-监督学习[基本原理和算法](http://sklearn.apachecn.org/cn/0.19.0/tutorial/statistical_inference/supervised_learning.html)
 
