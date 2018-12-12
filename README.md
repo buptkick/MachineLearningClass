@@ -72,7 +72,7 @@
 
 -	硬件：电脑PC一台
 
--	软件：Ubuntu、Anaconda 3、Scikit-learn 0.19及其依赖包
+-	软件：Ubuntu、Anaconda3 5.0.1、Scikit-learn 0.19及其依赖包
 
 ### 实验准备 ###
 
@@ -221,7 +221,7 @@
 
 -	硬件：电脑PC一台
 
--	软件：Ubuntu、Anaconda 3、Scikit-learn 0.19及其依赖包
+-	软件：Ubuntu、Anaconda3 5.0.1、Scikit-learn 0.19及其依赖包
 
 ### 实验准备 ###
 
@@ -395,7 +395,7 @@
 
 -	硬件：电脑PC一台
 
--	软件：Ubuntu、Python 3、Scikit-learn 0.19及其依赖包、Tensorflow1.4
+-	软件：Ubuntu、Anaconda3 5.0.1、Tensorflow 1.3.0及其依赖包
 
 ### 实验准备 ###
 

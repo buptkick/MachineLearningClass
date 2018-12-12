@@ -1,0 +1,9 @@
+Anaconda版本：
+Anaconda3-5.0.1-Linux-x86_64.sh
+
+TensorFlow安装：
+conda install tensorflow==1.3.0
+
+Python版本：
+3.6.3
+
