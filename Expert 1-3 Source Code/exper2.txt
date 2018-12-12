@@ -18,6 +18,7 @@ digits = load_digits()
 data = scale(digits.data)
 
 # 解析数据集
+# 数据集包含10个分类（手写数字1-10），1797个样本，特征维度为64维；
 n_samples, n_features = data.shape
 n_digits = len(np.unique(digits.target))
 labels = digits.target
@@ -46,17 +47,17 @@ def bench_k_means(estimator, name, data):
                                       metric='euclidean',
                                       sample_size=sample_size)))
 
-# 构建K-means分类器1，传入以上函数				  
+# 构建K-means分类器1: 初始化中心点为k-means++，传入以上函数				  
 bench_k_means(KMeans(init='k-means++', n_clusters=n_digits, n_init=10),
               name="k-means++", data=data)
 			  
-# 构建K-means分类器2，传入以上函数
+# 构建K-means分类器2：初始化中心点为random，传入以上函数
 bench_k_means(KMeans(init='random', n_clusters=n_digits, n_init=10),
               name="random", data=data)
 
 # in this case the seeding of the centers is deterministic, hence we run the
 # kmeans algorithm only once with n_init=1
-# 构建K-means分类器3，添加PCA降维，传入以上函数	
+# 构建K-means分类器3，利用PCA找到数据主轴，将其作为kmeans初始化中心点的方法，传入以上函数	
 pca = PCA(n_components=n_digits).fit(data)
 bench_k_means(KMeans(init=pca.components_, n_clusters=n_digits, n_init=1),
               name="PCA-based",

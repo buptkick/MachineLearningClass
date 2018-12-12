@@ -55,3 +55,13 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 print("test accuracy: ",sess.run(accuracy, feed_dict={x: mnist.test.images,
                                   y_: mnist.test.labels}))
 
+# part2 ：选择图片测试
+# 第几张图片？
+p = 0
+
+s = sess.run(y,feed_dict={x: mnist.test.images[p].reshape(1,784)})
+print("Prediction : ",sess.run(tf.argmax(s, 1)))
+
+#显示图片
+plt.imshow(mnist.test.images[p].reshape(28,28), cmap=plt.cm.gray_r, interpolation='nearest')
+plt.show()
