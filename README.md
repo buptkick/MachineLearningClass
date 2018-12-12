@@ -573,7 +573,7 @@
 
 1. 在`Terminal`命令行窗口中依次运行以下<font color=#A52A2A>**`2`**</font>条命令进入Docker容器openface环境内：
 
-    	sudo xhost +local:root
+		sudo xhost +local:root
 
 		sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /home/$USER:/home/$USER:rw -t -i openface/allset /bin/bash
 
@@ -685,11 +685,11 @@
 
 1. 依次运行以下<font color=#A52A2A>**`3`**</font>条命令：
 
-		mkdir -p /home/bupt/my_aligned_face/my_face 
+		mkdir -p /home/bupt/my_aligned_face/my_face
 
-		cp /root/openface/aligned_face_0.jpg /home/bupt/my_aligned_face/my_face/ 
+		cp /root/openface/aligned_face_0.jpg /home/bupt/my_aligned_face/my_face/
 
-		/root/openface/batch-represent/main.lua -outDir /home/bupt/my_reps/ -data /home/bupt/my_aligned_face/ 
+		/root/openface/batch-represent/main.lua -outDir /home/bupt/my_reps/ -data /home/bupt/my_aligned_face/
 
 1. 运行以上命令之后可在`/home/bupt/my_reps`目录下找到如下相应的128维面部特征编码文件`reps.csv`：
 
