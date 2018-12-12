@@ -1,9 +1,8 @@
-Anaconda°æ±¾£º
+Anacondaç‰ˆæœ¬ï¼š
 Anaconda3-5.0.1-Linux-x86_64.sh
 
-TensorFlow°²×°£º
+TensorFlowå®‰è£…ï¼š
 conda install tensorflow==1.3.0
 
-Python°æ±¾£º
+Pythonç‰ˆæœ¬ï¼š
 3.6.3
-
