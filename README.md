@@ -1,3 +1,6 @@
+
+----------
+
 # 目录 #
 
 - [准备工作](#准备工作)
@@ -41,9 +44,9 @@
 
 -	LINUX系统管理员密码：`123456`
 
--	系统启动后打开左边栏`FireFox`火狐浏览器
+-	系统启动后打开左边栏`FireFox`火狐浏览器![](http://www.firefox.com.cn/media/img/firefox/favicon.e6bb0e59df3d.ico)
 
--	在上方地址编辑栏输入ftp网址：
+-	在上方地址编辑栏输入`FTP`网址：
 
 	>地址：[`ftp://10.105.240.91`](ftp://student:asdf1234@10.105.240.91/Machine%20Learning)
 
@@ -597,11 +600,11 @@
 
 #### 建立人脸样本库 ####
 
-1.	通过运行以下<font color=#A52A2A>**`1`**</font>条命令，或者手动进入bupt用户主目录`/home/bupt`下使用鼠标右键菜单新建文件夹`Create floder`选项创建`training-images`文件夹（若提示目录已存在则可忽略）：
+1.	运行以下<font color=#A52A2A>**`1`**</font>条命令（**或者**使用鼠标左键点击左上角图标![](https://i.imgur.com/G2jr5vR.png)手动进入bupt用户主目录`/home/bupt`内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建`training-images`文件夹（若提示目录已存在则可忽略）：
 
 		mkdir -vm 777 /home/bupt/training-images
 
-1.	通过运行以下命令语句**或者**手动进入`/home/bupt/training-images/`目录使用鼠标右键菜单新建文件夹`Create floder`选项创建各个（<font color=#A52A2A>**必须`2`个以上**</font>）不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你自定义的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
+1.	运行类似以下命令语句（**或者**使用鼠标双击文件夹图标![](https://i.imgur.com/r7fF9KI.png)进入`/home/bupt/training-images/`目录内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建各个（<font color=#A52A2A>**必须`2`个以上**</font>）不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你自定义的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
 
 		mkdir -vm 777 /home/bupt/training-images/person1
 
@@ -613,9 +616,9 @@
 
 	![](https://i.imgur.com/iXEOeL6.png)
 
-1.	拷贝需要训练的人脸照片样本至相应目录：
+1.	拷贝需要作为训练集的人脸照片样本至相应目录：
 
-	通过网络下载或者U盘等移动存储设备把照片样本拷贝至bupt用户主目录`/home/bupt`下的`training-images`文件夹中对应的各文件目录`person1`、`person2`、`person3`下（此时文件夹名应该已经替换为你自定义的名称了）。
+	通过网络下载或者U盘等移动存储设备把照片样本复制`Copy`至bupt用户主目录`/home/bupt`下的`training-images`文件夹中对应的各文件目录`person1`、`person2`、`person3`下（此时文件夹名应该**已经**替换为你自定义的名称了，并且每一个文件夹都<font color=#A52A2A>**必须**</font>要拷入图片文件使其<font color=#A52A2A>**不为空**</font>）。
 	
 	![](https://i.imgur.com/WJRBj5Y.png)
 
