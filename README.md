@@ -741,7 +741,7 @@
 
 		/root/openface/demos/classifier.py infer /home/bupt/generated-embeddings/classifier.pkl your_test_image_fullpath.jpg
 
-1.	运行以上命令之后会在`Terminal`命令窗口中显示如下识别结果：
+1.	运行以上命令之后会在`Terminal`命令窗口中显示类似如下识别结果：
 
 	![](https://i.imgur.com/MpfSDla.png)
 
