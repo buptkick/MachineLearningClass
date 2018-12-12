@@ -600,11 +600,11 @@
 
 #### 建立人脸样本库 ####
 
-1.	运行以下<font color=#A52A2A>**`1`**</font>条命令（**或者**使用鼠标左键点击左上角图标![](https://i.imgur.com/G2jr5vR.png)手动进入bupt用户主目录`/home/bupt`内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建`training-images`文件夹（若提示目录已存在则可忽略）：
+1.	运行以下<font color=#A52A2A>**`1`**</font>条命令（**或者**使用鼠标左键单击左边栏图标![](https://i.imgur.com/G2jr5vR.png)手动进入bupt用户主目录`/home/bupt`内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建`training-images`文件夹（若提示目录已存在则可忽略）：
 
 		mkdir -vm 777 /home/bupt/training-images
 
-1.	运行类似以下命令语句（**或者**使用鼠标双击文件夹图标![](https://i.imgur.com/r7fF9KI.png)进入`/home/bupt/training-images/`目录内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建各个（<font color=#A52A2A>**必须`2`个以上**</font>）不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你自定义的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
+1.	运行类似以下命令语句（**或者**使用鼠标左键双击文件夹图标![](https://i.imgur.com/r7fF9KI.png)进入`/home/bupt/training-images/`目录内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建各个（<font color=#A52A2A>**必须`2`个以上**</font>）不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你自定义的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
 
 		mkdir -vm 777 /home/bupt/training-images/person1
 
@@ -618,13 +618,13 @@
 
 1.	拷贝需要作为训练集的人脸照片样本至相应目录：
 
-	通过网络下载或者U盘等移动存储设备把照片样本复制`Copy`至bupt用户主目录`/home/bupt`下的`training-images`文件夹中对应的各文件目录`person1`、`person2`、`person3`下（此时文件夹名应该**已经**替换为你自定义的名称了，并且每一个文件夹都<font color=#A52A2A>**必须**</font>要拷入图片文件使其<font color=#A52A2A>**不为空**</font>）。
+	通过网络下载或者U盘等移动存储设备把照片样本复制`Copy`至bupt用户主目录`/home/bupt`下的`training-images`文件夹中对应的各文件目录`person1`、`person2`、`person3`下（此时文件夹名应该**已经**替换为你自定义的名称了，并且每一个文件夹都<font color=#A52A2A>**必须**</font>要拷入图片文件使其<font color=#A52A2A>**不为空**</font>，如果不小心多建了不用的文件夹请<font color=#A52A2A>**务必`Delete`删除**</font>）。
 	
 	![](https://i.imgur.com/WJRBj5Y.png)
 
 1.	<font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
 
-	-	把各个人的照片样本拷贝至<font color=#A52A2A>**与其相应**</font>的样本库文件夹，并保证每个照片样本中<font color=#A52A2A>**只有一张人脸**</font>，并清晰可见（<font color=#A52A2A>**眉/眼/鼻/嘴/脸廓**</font>完整，且<font color=#A52A2A>**未**</font>佩戴眼镜）。
+	-	把各个人的照片样本拷贝至<font color=#A52A2A>**与其相应**</font>的样本库文件夹，并保证每个照片样本中<font color=#A52A2A>**只有一张人脸**</font>，并清晰可见（<font color=#A52A2A>**眉/眼/鼻/嘴/脸廓**</font>完整，最好<font color=#A52A2A>**不要**</font>佩戴眼镜）。
 
 	-	<font color=#A52A2A>**必须确保**</font>每个已建立的人脸库文件夹中均包含照片样本而<font color=#A52A2A>**不为空**</font>。
 	
