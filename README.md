@@ -589,7 +589,7 @@
 
 		rm /root/openface/aligned_face_0.jpg
 
-		rm -r /home/bupt/training-images/*
+		rm -r /home/bupt/training-images
 
 		rm -r /home/bupt/aligned-images
 
@@ -597,24 +597,26 @@
 
 #### 建立人脸样本库 ####
 
-1.	通过命令创建各不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你**自定义**的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
+1.	通过运行以下<font color=#A52A2A>**`1`**</font>条命令，或者手动进入bupt用户主目录`/home/bupt`下使用鼠标右键菜单新建文件夹`Create floder`选项创建`training-images`文件夹（若提示目录已存在则可忽略）：
 
-		mkdir -p /home/bupt/training-images/person1
+		mkdir -vm 777 /home/bupt/training-images
 
-		mkdir -p /home/bupt/training-images/person2
+1.	通过运行以下命令语句**或者**手动进入`/home/bupt/training-images/`目录使用鼠标右键菜单新建文件夹`Create floder`选项创建各个（<font color=#A52A2A>**必须`2`个以上**</font>）不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你自定义的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
 
-		mkdir -p /home/bupt/training-images/person3
+		mkdir -vm 777 /home/bupt/training-images/person1
+
+		mkdir -vm 777 /home/bupt/training-images/person2
+
+		mkdir -vm 777 /home/bupt/training-images/person3
 
 		...
 
-1.	运行以下<font color=#A52A2A>**`1`**</font>条命令**修改目录权限**为可读可写（<font color=#A52A2A>`！！！重要！！！`</font>）：
-
-		chmod -R 777 /home/bupt/training-images
+	![](https://i.imgur.com/iXEOeL6.png)
 
 1.	拷贝需要训练的人脸照片样本至相应目录：
 
-	通过网络下载或者U盘等移动存储设备把照片样本拷贝至bupt用户主目录`/home/bupt`下`training-images`文件夹下对应的各对应文件目录`person1`、`person2`、`person3`下（此时文件夹名应该已经替换为你自定义的名称了）。
-
+	通过网络下载或者U盘等移动存储设备把照片样本拷贝至bupt用户主目录`/home/bupt`下的`training-images`文件夹中对应的各文件目录`person1`、`person2`、`person3`下（此时文件夹名应该已经替换为你自定义的名称了）。
+	
 	![](https://i.imgur.com/WJRBj5Y.png)
 
 1.	<font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
