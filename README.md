@@ -676,7 +676,7 @@
 
 1.	可运行以下<font color=#A52A2A>**`1`**</font>条命令把裁剪后的图片文件`aligned_face_0.jpg`拷贝至bupt用户主目录`/home/bupt`：
 
-		cp ./aligned_face_0.jpg /home/bupt/
+		cp /root/openface/aligned_face_0.jpg /home/bupt/
 
 	然后在主目录**双击**打开![](https://i.imgur.com/4Vn1zKX.png)查看：
 
