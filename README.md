@@ -37,13 +37,13 @@
 
 # 准备工作 #
 
-- 开机选择第一个操作系统：`LINUX`
+-	开机选择第一个操作系统：`LINUX`
 
-- LINUX系统管理员密码：`123456`
+-	LINUX系统管理员密码：`123456`
 
-- 系统启动后打开左边栏`FireFox`火狐浏览器
+-	系统启动后打开左边栏`FireFox`火狐浏览器
 
-- 在上方地址编辑栏输入ftp网址：
+-	在上方地址编辑栏输入ftp网址：
 
 	>地址：[`ftp://10.105.240.91`](ftp://student:asdf1234@10.105.240.91/Machine%20Learning)
 
@@ -51,9 +51,9 @@
 
 	>密码：`asdf1234`
 
-- 进入`Machine Learning`目录
+-	进入`Machine Learning`目录
 
-- 下载实验讲义PPT、实验指导手册及相关实验源代码文档
+-	下载实验讲义PPT、实验指导手册及相关实验源代码文档
 
 ----------
 
@@ -61,22 +61,22 @@
 
 ## 实验目标 ##
 
-- 了解机器学习的基本概念，了解机器学习的应用方法。通过实验掌握机器学习预测任务的基本流程。
+-	了解机器学习的基本概念，了解机器学习的应用方法。通过实验掌握机器学习预测任务的基本流程。
 
 ## 实验器材及准备 ##
 
 ### 实验器材 ###
 
-- 硬件：电脑PC一台
+-	硬件：电脑PC一台
 
-- 软件：Ubuntu、Anaconda 3、Scikit-learn 0.19及其依赖包
+-	软件：Ubuntu、Anaconda 3、Scikit-learn 0.19及其依赖包
 
 ### 实验准备 ###
 
 
-- 查阅机器学习-监督学习[基本原理和算法](http://sklearn.apachecn.org/cn/0.19.0/tutorial/statistical_inference/supervised_learning.html)
+-	查阅机器学习-监督学习[基本原理和算法](http://sklearn.apachecn.org/cn/0.19.0/tutorial/statistical_inference/supervised_learning.html)
 
-- 查阅SVM分类器[基本原理](http://sklearn.apachecn.org/cn/0.19.0/modules/svm.html)
+-	查阅SVM分类器[基本原理](http://sklearn.apachecn.org/cn/0.19.0/modules/svm.html)
 
 ## 实验内容与步骤 ##
 
@@ -86,51 +86,51 @@
 
 ### 打开编译环境 ###
 
-1. 进入Ubuntu系统后，同时按下`Ctrl`+<font color=#A52A2A>`Alt`</font>+`T`打开终端`Terminal`窗口。
+1.	进入Ubuntu系统后，同时按下`Ctrl`+<font color=#A52A2A>`Alt`</font>+`T`打开终端`Terminal`窗口。
 
-1. 在终端窗口中输入以下<font color=#A52A2A>**`1`**</font>条命令打开Jupyter Notebook编译环境：
+1.	在终端窗口中输入以下<font color=#A52A2A>**`1`**</font>条命令打开Jupyter Notebook编译环境：
 
 		jupyter notebook
 
-1. 键入`Enter`回车键后等待，浏览器会自动打开如下地址：
+1.	键入`Enter`回车键后等待，浏览器会自动打开如下地址：
 
 	![](https://i.imgur.com/PZYQqSc.png)
 
-1. 点击页面右上方区域按钮`new`->`python3`
+1.	点击页面右上方区域按钮`new`->`python3`
 
-1. 将`exper1.txt`文件中代码复制入`In[]:`后光标中，键入`Shift`+`Enter`运行。
+1.	将`exper1.txt`文件中代码复制入`In[]:`后光标中，键入`Shift`+`Enter`运行。
 
 	![](https://i.imgur.com/PFyjMn9.png)
 
-1. 代码文件`exper1.txt`中实现了以下步骤，详见**代码注释**：
+1.	代码文件`exper1.txt`中实现了以下步骤，详见**代码注释**：
 
-	1. 载入示例数据集。载入Scikit-learn自带数据集手写数字识别集（Handwritten Digits Data Set）。
+	1.	载入示例数据集。载入Scikit-learn自带数据集手写数字识别集（Handwritten Digits Data Set）。
 
-	1. 查看数据集。使用`matplotlib`显示数据集图片。
+	1.	查看数据集。使用`matplotlib`显示数据集图片。
 
-	1. 数据预处理。使用`numpy`将图片展开成向量。
+	1.	数据预处理。使用`numpy`将图片展开成向量。
 
-	1. 学习和预测。使用Scikit-learn中的分类器`SVM`，在一半数据集上训练，另一半数据集上做出预测。
+	1.	学习和预测。使用Scikit-learn中的分类器`SVM`，在一半数据集上训练，另一半数据集上做出预测。
 
-	1. 检查预测效果。使用Scikit-learn自带`metrics`检查预测准确率、召回率及混淆矩阵（Confusion Matrix）等。
+	1.	检查预测效果。使用Scikit-learn自带`metrics`检查预测准确率、召回率及混淆矩阵（Confusion Matrix）等。
 
 ## 实验结果 ##
 
-- 分类器说明和每个分类的准确率`precision`，召回率`recal`和F1分数`f1-score`。
+-	分类器说明和每个分类的准确率`precision`，召回率`recal`和F1分数`f1-score`。
 
 	![](https://i.imgur.com/PdUhY7M.png)
 
-- 混淆矩阵：可看到测试数据集被分类的情况。
+-	混淆矩阵：可看到测试数据集被分类的情况。
 
 	![](https://i.imgur.com/mCVubl6.png)
 
-- 训练和测试情况。
+-	训练和测试情况。
 
 	![](https://i.imgur.com/2G57l0P.png)
 
 ## 课后习题 ##
 
-- 参考[SVM参数表](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)修改SVM参数，如惩罚因子`C`、rbf核函数的系数`gamma`等，观察预测结果的变化情况。修改代码后键入`Shift`+`Enter`可再次运行。
+-	参考[SVM参数表](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)修改SVM参数，如惩罚因子`C`、rbf核函数的系数`gamma`等，观察预测结果的变化情况。修改代码后键入`Shift`+`Enter`可再次运行。
 
 	![](https://i.imgur.com/f55ZeJC.png)
 
@@ -208,59 +208,59 @@
 
 ## 实验目标 ##
 
-- 了解机器学习有监督和无监督的区别。
+-	了解机器学习有监督和无监督的区别。
 
-- 通过实验掌握简单无监督算法使用方式。
+-	通过实验掌握简单无监督算法使用方式。
 
 ## 实验器材及准备 ##
 
 ### 实验器材 ###
 
-- 硬件：电脑PC一台
+-	硬件：电脑PC一台
 
-- 软件：Ubuntu、Anaconda 3、Scikit-learn 0.19及其依赖包
+-	软件：Ubuntu、Anaconda 3、Scikit-learn 0.19及其依赖包
 
 ### 实验准备 ###
 
-- 查阅机器学习-无监督学习[基本原理和相关算法](http://sklearn.apachecn.org/cn/0.19.0/tutorial/statistical_inference/unsupervised_learning.html)
+-	查阅机器学习-无监督学习[基本原理和相关算法](http://sklearn.apachecn.org/cn/0.19.0/tutorial/statistical_inference/unsupervised_learning.html)
 
-- 查阅聚类基本原理及K-means[算法原理](http://sklearn.apachecn.org/cn/0.19.0/modules/clustering.html)
+-	查阅聚类基本原理及K-means[算法原理](http://sklearn.apachecn.org/cn/0.19.0/modules/clustering.html)
 
 ## 实验内容与步骤 ##
 
-1. 打开编译环境。如实验一打开Jupyter Notebook，新建`new`->`python3`交互窗口。
+1.	打开编译环境。如实验一打开Jupyter Notebook，新建`new`->`python3`交互窗口。
 
 2. 代码文件`exper2.txt`中实现了以下步骤，详见**代码注释**：
 
-	1. 载入示例数据集。载入Scikit-learn自带数据集手写数字识别集（Handwritten Digits Data Set）。
+	1.	载入示例数据集。载入Scikit-learn自带数据集手写数字识别集（Handwritten Digits Data Set）。
 	
-	1. 数据预处理。使用`numpy`将图片展开成向量。
+	1.	数据预处理。使用`numpy`将图片展开成向量。
 	
-	1. 学习和预测。使用Scikit-learn中的聚类算法`K-Means`，在全部数据集上做聚类。 
+	1.	学习和预测。使用Scikit-learn中的聚类算法`K-Means`，在全部数据集上做聚类。 
 	
-	1. 检查聚类效果。使用Scikit-learn自带`metrics`检查聚类效果。
+	1.	检查聚类效果。使用Scikit-learn自带`metrics`检查聚类效果。
 	
-	1. 聚类可视化。使用`matplotlib`可视化聚类结果（`PCA`降维到`2`维以便平面显示）。
+	1.	聚类可视化。使用`matplotlib`可视化聚类结果（`PCA`降维到`2`维以便平面显示）。
 
 ## 实验结果 ##
 
-- 数据集包含10个分类（手写数字1-10），1797个样本，特征维度为64维。
+-	数据集包含10个分类（手写数字1-10），1797个样本，特征维度为64维。
 
 	![](https://i.imgur.com/prIQJYS.png)
 
-- 可以看到3个不同kmeans初始化中心点方法的聚类器的效果，注意使用PCA-based方法初始化中心点速度极快，因为中心点更新次数少。
+-	可以看到3个不同kmeans初始化中心点方法的聚类器的效果，注意使用PCA-based方法初始化中心点速度极快，因为中心点更新次数少。
 
 	![](https://i.imgur.com/fYW8F6h.png)
 
 	![](https://i.imgur.com/Ypn5CuK.png)
 
-- 最后在图中可以看到PCA降维到2维的数据聚类情况。
+-	最后在图中可以看到PCA降维到2维的数据聚类情况。
 
 	![](https://i.imgur.com/6hPIppJ.png)
 
 ## 课后习题 ##
 
-- 参考k-means[参数表](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans)修改k-means参数，如**分类器**初始化类型（`k-means++`、`random`、`PCA-based`）、类别数`n_clusters`等，观察聚类结果变化情况。
+-	参考k-means[参数表](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans)修改k-means参数，如**分类器**初始化类型（`k-means++`、`random`、`PCA-based`）、类别数`n_clusters`等，观察聚类结果变化情况。
 
 	![](https://i.imgur.com/eEP75zg.png)
 
@@ -382,57 +382,57 @@
 
 ## 实验目标 ##
 
-- 了解深度学习的基本概念。
+-	了解深度学习的基本概念。
 
-- 通过实验学会使用框架实现简单神经网络。
+-	通过实验学会使用框架实现简单神经网络。
 
 ## 实验器材及准备 ##
 
 ### 实验器材 ###
 
-- 硬件：电脑PC一台
+-	硬件：电脑PC一台
 
-- 软件：Ubuntu、Python 3、Scikit-learn 0.19及其依赖包、Tensorflow1.4
+-	软件：Ubuntu、Python 3、Scikit-learn 0.19及其依赖包、Tensorflow1.4
 
 ### 实验准备 ###
 
-- 查阅深度学习与MNIST数据集[基本原理和相关算法](https://www.tensorflow.org/get_started/mnist/beginners)
+-	查阅深度学习与MNIST数据集[基本原理和相关算法](https://www.tensorflow.org/get_started/mnist/beginners)
 
 ## 实验内容与步骤 ##
 
-1. 打开编译环境。如实验一打开Jupyter Notebook，新建`new`->`python3`交互窗口。
+1.	打开编译环境。如实验一打开Jupyter Notebook，新建`new`->`python3`交互窗口。
 
-1. 代码文件`exper3.txt`中实现了以下步骤，详见**代码注释**：
+1.	代码文件`exper3.txt`中实现了以下步骤，详见**代码注释**：
 
-	- 首先粘贴`part1`部分代码，运行`part1`部分代码（可能要运行几分钟之后才有结果输出，耐心等待一下）：
+	-	首先粘贴`part1`部分代码，运行`part1`部分代码（可能要运行几分钟之后才有结果输出，耐心等待一下）：
 	
-		1. 载入示例数据集。载入Tensorflow自带数据集手写数字识别集（MNIST Data）。
+		1.	载入示例数据集。载入Tensorflow自带数据集手写数字识别集（MNIST Data）。
 	
-		1. 构建神经网络。利用Tensorflow构建简单神经网络，定义损失函数和优化器。
+		1.	构建神经网络。利用Tensorflow构建简单神经网络，定义损失函数和优化器。
 	
-		1. 学习和预测。在给定的训练样本上运行以上神经网络，观察交叉熵（Cross Entropy）误差`error`值的变化，并在待测样本上做出预测。 
+		1.	学习和预测。在给定的训练样本上运行以上神经网络，观察交叉熵（Cross Entropy）误差`error`值的变化，并在待测样本上做出预测。 
 	
-		1. 检查预测效果。定义准确率`accuracy`计算方式，检查预测准确率。
+		1.	检查预测效果。定义准确率`accuracy`计算方式，检查预测准确率。
 	
-	- 在下一个输入框中，运行`part2`部分代码，查看预测结果和图片：
+	-	在下一个输入框中，运行`part2`部分代码，查看预测结果和图片：
 	
-		1. 选择图片并进行预测。选择一张图片，用训练好的模型对新的图片进行预测。
+		1.	选择图片并进行预测。选择一张图片，用训练好的模型对新的图片进行预测。
 	
-		1. 输出图片及预测结果。使用`matplotlib`可视化图及结果。
+		1.	输出图片及预测结果。使用`matplotlib`可视化图及结果。
 
 ## 实验结果 ##
 
-- 随着迭代的进行，神经网络在数据集上的交叉熵（Cross Entropy）误差`error`值越来越小，代表正在慢慢拟合训练数据，最后在测试集上的测试准确率`accuracy`为`91.02%`。
+-	随着迭代的进行，神经网络在数据集上的交叉熵（Cross Entropy）误差`error`值越来越小，代表正在慢慢拟合训练数据，最后在测试集上的测试准确率`accuracy`为`91.02%`。
 
 	![](https://i.imgur.com/Igv7sT4.png)
 
-- 选取测试集图片，进行预测：
+-	选取测试集图片，进行预测：
 
 	![](https://i.imgur.com/bnho3Gf.png)
 
 ## 课后习题 ##
 
-- 修改学习迭代次数`range`、学习率`learning_rate`等，观察结果的变化。
+-	修改学习迭代次数`range`、学习率`learning_rate`等，观察结果的变化。
 
 	![](https://i.imgur.com/cI6Lehb.png)
 
@@ -517,27 +517,27 @@
 
 ## 实验目标 ##
 
-- 了解人脸识别的基本原理
+-	了解人脸识别的基本原理
 
-- 通过实验熟悉人脸识别的四个过程
+-	通过实验熟悉人脸识别的四个过程
 
 ## 实验器材及准备 ##
 
 ### 实验器材 ###
 
-- 硬件：电脑PC一台
+-	硬件：电脑PC一台
 
-- 软件：Ubuntu、Docker、openface项目Docker容器镜像及其相关依赖包
+-	软件：Ubuntu、Docker、openface项目Docker容器镜像及其相关依赖包
 
 ### 实验准备 ###
 
-- 仔细阅读课程讲义PPT内容，了解人脸识别**四个基本步骤**。
+-	仔细阅读课程讲义PPT内容，了解人脸识别**四个基本步骤**。
 
-- 查阅Docker工具[使用手册](http://www.docker.org.cn/book/docker/what-is-docker-16.html)
+-	查阅Docker工具[使用手册](http://www.docker.org.cn/book/docker/what-is-docker-16.html)
 
-- 查阅机器学习及人脸识别相关理论及算法：[HOG](http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf)、[仿射变换](https://en.wikipedia.org/wiki/Affine_transformation)、[128维embedding面部特征向量编码](https://www.cv-foundation.org/openaccess/content_cvpr_2015/app/1A_089.pdf)
+-	查阅机器学习及人脸识别相关理论及算法：[HOG](http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf)、[仿射变换](https://en.wikipedia.org/wiki/Affine_transformation)、[128维embedding面部特征向量编码](https://www.cv-foundation.org/openaccess/content_cvpr_2015/app/1A_089.pdf)
 
-- 查阅openface相关背景知识：[cmusatyalab](https://cmusatyalab.github.io/openface/)、[openface](https://github.com/cmusatyalab/openface)
+-	查阅openface相关背景知识：[cmusatyalab](https://cmusatyalab.github.io/openface/)、[openface](https://github.com/cmusatyalab/openface)
 
 ## 实验内容与步骤 ##
 
@@ -545,47 +545,47 @@
 
 #### Linux相关基础知识 ####
 
-1. 本实验说明中所有命令语句均可使用 **复制**`Copy` / **粘贴**`Paste` 操作在实验机的`Terminal`命令窗口中直接运行，调取命令窗口 **快捷键** 为`Ctrl`+<font color=#A52A2A>`Alt`</font>+`T`。
+1.	本实验说明中所有命令语句均可使用 **复制**`Copy` / **粘贴**`Paste` 操作在实验机的`Terminal`命令窗口中直接运行，调取命令窗口 **快捷键** 为`Ctrl`+<font color=#A52A2A>`Alt`</font>+`T`。
 
-1. **复制**`Copy` 命令语句时，请用鼠标选定本手册中每条命令语句的 **第一个非空格字符** 直至 **最后一个非空格字符**，注意命令语句中不要遗漏 **斜杠**`/` 或者 **空格**`Space`。
+1.	**复制**`Copy` 命令语句时，请用鼠标选定本手册中每条命令语句的 **第一个非空格字符** 直至 **最后一个非空格字符**，注意命令语句中不要遗漏 **斜杠**`/` 或者 **空格**`Space`。
 
-1. `Terminal`命令窗口中的 **复制**`Copy` 操作可以使用 **鼠标右键菜单->复制**`Copy` 或者使用 **快捷键**`Ctrl`+<font color=#A52A2A>`Shift`</font>+`C`。
+1.	`Terminal`命令窗口中的 **复制**`Copy` 操作可以使用 **鼠标右键菜单->复制**`Copy` 或者使用 **快捷键**`Ctrl`+<font color=#A52A2A>`Shift`</font>+`C`。
 
-1. `Terminal`命令窗口中的 **粘贴**`Paste` 操作可以使用 **鼠标右键菜单->粘贴**`Paste` 或者使用 **快捷键**`Ctrl`+<font color=#A52A2A>`Shift`</font>+`V`。
+1.	`Terminal`命令窗口中的 **粘贴**`Paste` 操作可以使用 **鼠标右键菜单->粘贴**`Paste` 或者使用 **快捷键**`Ctrl`+<font color=#A52A2A>`Shift`</font>+`V`。
 
-1. `Terminal`命令窗口中可以使用 **方向键** **上**`∧` / **下**`∨` 查看之前自己输入过的命令语句。
+1.	`Terminal`命令窗口中可以使用 **方向键** **上**`∧` / **下**`∨` 查看之前自己输入过的命令语句。
 
-1. `Terminal`命令窗口中输入命令或路径时，可以使用 **快捷键**`Tab` 对命令或路径进行快速补全操作。
+1.	`Terminal`命令窗口中输入命令或路径时，可以使用 **快捷键**`Tab` 对命令或路径进行快速补全操作。
 
 #### Docker简介 ####
 
 >Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、[bare metal](http://www.whatis.com.cn/word_5275.htm)、OpenStack集群和其他的基础应用平台。
 
-1. 本实验利用基于openface开源项目所提供的Docker容器镜像`bamos/openface`环境进行人脸识别实验。
+1.	本实验利用基于openface开源项目所提供的Docker容器镜像`bamos/openface`环境进行人脸识别实验。
 
-1. <font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
+1.	<font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
 
 	在`Terminal`命令窗口中进入Docker容器内运行的所有实验代码的**工作目录**均为`/root/openface`，请把命令语句中**所有的** `your_test_image_fullpath.jpg`替换为你自己的**完整图片路径**，例如：`/home/bupt/my_pic.jpg`
 
 #### 运行Docker实验环境 ####
 
-1. 使用快捷键`Ctrl`+<font color=#A52A2A>`Alt`</font>+`T`打开`Terminal`命令行窗口
+1.	使用快捷键`Ctrl`+<font color=#A52A2A>`Alt`</font>+`T`打开`Terminal`命令行窗口
 
-1. 在`Terminal`命令行窗口中依次运行以下<font color=#A52A2A>**`2`**</font>条命令进入Docker容器openface环境内：
+1.	在`Terminal`命令行窗口中依次运行以下<font color=#A52A2A>**`2`**</font>条命令进入Docker容器openface环境内：
 
 		sudo xhost +local:root
 
 		sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /home/$USER:/home/$USER:rw -t -i openface/allset /bin/bash
 
-1. 运行以上第<font color=#A52A2A>`1`</font>条命令后会被要求输入管理员密码，密码为<font color=#A52A2A>`123456`</font>，在输入密码时`Terminal`命令行窗口中<font color=#A52A2A>**不会显示密码输入**</font>，在确认输入无误后单击回车`Enter`按钮即可，若显示如下信息则表示第<font color=#A52A2A>`1`</font>条命令运行成功，可以继续输入第<font color=#A52A2A>`2`</font>条命令：
+1.	运行以上第<font color=#A52A2A>`1`</font>条命令后会被要求输入管理员密码，密码为<font color=#A52A2A>`123456`</font>，在输入密码时`Terminal`命令行窗口中<font color=#A52A2A>**不会显示密码输入**</font>，在确认输入无误后单击回车`Enter`按钮即可，若显示如下信息则表示第<font color=#A52A2A>`1`</font>条命令运行成功，可以继续输入第<font color=#A52A2A>`2`</font>条命令：
 
 	![](https://i.imgur.com/ip3WtFF.png)
 
-1. 运行完以上<font color=#A52A2A>**`2`**</font>条命令进入Docker容器后，运行以下<font color=#A52A2A>**`1`**</font>条命令转至 **openface工作目录**`/root/openface` （<font color=#A52A2A>**`！！！重要！！！`**</font>）：
+1.	运行完以上<font color=#A52A2A>**`2`**</font>条命令进入Docker容器后，运行以下<font color=#A52A2A>**`1`**</font>条命令转至 **openface工作目录**`/root/openface` （<font color=#A52A2A>**`！！！重要！！！`**</font>）：
 
 		cd /root/openface
 
-1. 运行以下<font color=#A52A2A>**`4`**</font>条命令清除示例样本文件（若提示文件不存在则可忽略）：
+1.	运行以下<font color=#A52A2A>**`4`**</font>条命令清除示例样本文件（若提示文件不存在则可忽略）：
 
 		rm /root/openface/aligned_face_0.jpg
 
@@ -597,7 +597,7 @@
 
 #### 建立人脸样本库 ####
 
-1. 通过命令创建各不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你**自定义**的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
+1.	通过命令创建各不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你**自定义**的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
 
 		mkdir -p /home/bupt/training-images/person1
 
@@ -607,27 +607,27 @@
 
 		...
 
-1. 运行以下<font color=#A52A2A>**`1`**</font>条命令**修改目录权限**为可读可写（<font color=#A52A2A>`！！！重要！！！`</font>）：
+1.	运行以下<font color=#A52A2A>**`1`**</font>条命令**修改目录权限**为可读可写（<font color=#A52A2A>`！！！重要！！！`</font>）：
 
 		chmod -R 777 /home/bupt/training-images
 
-1. 拷贝需要训练的人脸照片样本至相应目录：
+1.	拷贝需要训练的人脸照片样本至相应目录：
 
 	通过网络下载或者U盘等移动存储设备把照片样本拷贝至bupt用户主目录`/home/bupt`下`training-images`文件夹下对应的各对应文件目录`person1`、`person2`、`person3`下（此时文件夹名应该已经替换为你自定义的名称了）。
 
 	![](https://i.imgur.com/WJRBj5Y.png)
 
-1. <font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
+1.	<font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
 
-	- 把各个人的照片样本拷贝至<font color=#A52A2A>**与其相应**</font>的样本库文件夹，并保证每个照片样本中<font color=#A52A2A>**只有一张人脸**</font>，并清晰可见（<font color=#A52A2A>**眉/眼/鼻/嘴/脸廓**</font>完整，且<font color=#A52A2A>**未**</font>佩戴眼镜）。
+	-	把各个人的照片样本拷贝至<font color=#A52A2A>**与其相应**</font>的样本库文件夹，并保证每个照片样本中<font color=#A52A2A>**只有一张人脸**</font>，并清晰可见（<font color=#A52A2A>**眉/眼/鼻/嘴/脸廓**</font>完整，且<font color=#A52A2A>**未**</font>佩戴眼镜）。
 
-	- <font color=#A52A2A>**必须确保**</font>每个已建立的人脸库文件夹中均包含照片样本而<font color=#A52A2A>**不为空**</font>。
+	-	<font color=#A52A2A>**必须确保**</font>每个已建立的人脸库文件夹中均包含照片样本而<font color=#A52A2A>**不为空**</font>。
 	
-	- <font color=#A52A2A>**必须至少**</font>建立<font color=#A52A2A>**`2`**</font>个以上的人脸库文件夹，推荐<font color=#A52A2A>`3`</font>个以上。
+	-	<font color=#A52A2A>**必须至少**</font>建立<font color=#A52A2A>**`2`**</font>个以上的人脸库文件夹，推荐<font color=#A52A2A>`3`</font>个以上。
 
-	- 推荐每个人都有<font color=#A52A2A>**`10`**</font>张以上的照片样本，最好包含不同角度、侧面等，但是必须保证<font color=#A52A2A>**眉/眼/鼻/嘴/脸廓**</font>完整。
+	-	推荐每个人都有<font color=#A52A2A>**`10`**</font>张以上的照片样本，最好包含不同角度、侧面等，但是必须保证<font color=#A52A2A>**眉/眼/鼻/嘴/脸廓**</font>完整。
 
-	- <font color=#A52A2A>**并不需要**</font>提供经过align裁剪后的照片样本，普通的日常照片就行，openface会根据命令对照片样本进行align裁剪。
+	-	<font color=#A52A2A>**并不需要**</font>提供经过align裁剪后的照片样本，普通的日常照片就行，openface会根据命令对照片样本进行align裁剪。
 
 ----------
 
@@ -635,15 +635,15 @@
 
 #### 运行`step-1_find-faces.py`获取人脸位置 ####
 
-1. 把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
+1.	把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
 
 		python /root/openface/step-1_find-faces.py your_test_image_fullpath.jpg
 
-1. 运行以上命令之后会显示如下类似图片结果：
+1.	运行以上命令之后会显示如下类似图片结果：
 
 	![](https://i.imgur.com/3Lg1NTx.jpg)
 
-1. 在Terminal命令行窗口中<font color=#A52A2A>**键入`Enter`回车按钮**</font>继续。
+1.	在Terminal命令行窗口中<font color=#A52A2A>**键入`Enter`回车按钮**</font>继续。
 
 ----------
 
@@ -651,25 +651,25 @@
 
 #### 运行`step-2a_finding-face-landmarks.py`获取脸部特征 ####
 
-1. 把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整图片路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
+1.	把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整图片路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
 
 		python /root/openface/step-2a_finding-face-landmarks.py your_test_image_fullpath.jpg
 
-1. 运行以上命令之后会显示如下类似图片结果：
+1.	运行以上命令之后会显示如下类似图片结果：
 
 	![](https://i.imgur.com/MQq0N4u.jpg)
 
-1. 在Terminal命令行窗口中<font color=#A52A2A>**键入`Enter`回车按钮**</font>继续。
+1.	在Terminal命令行窗口中<font color=#A52A2A>**键入`Enter`回车按钮**</font>继续。
 
 #### 运行`step-2b_projecting-faces.py`获取仿射变换后的照片 ####
 
-1. 把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整图片路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
+1.	把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整图片路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
 
 		python /root/openface/step-2b_projecting-faces.py your_test_image_fullpath.jpg
 
-1. 运行以上命令之后会在工作目录`/root/openface`下生成如下相应的裁剪图片文件`aligned_face_0.jpg`：
+1.	运行以上命令之后会在工作目录`/root/openface`下生成如下相应的裁剪图片文件`aligned_face_0.jpg`：
 
-1. 可运行以下<font color=#A52A2A>**`1`**</font>条命令把裁剪后的图片文件`aligned_face_0.jpg`拷贝至bupt用户主目录`/home/bupt`：
+1.	可运行以下<font color=#A52A2A>**`1`**</font>条命令把裁剪后的图片文件`aligned_face_0.jpg`拷贝至bupt用户主目录`/home/bupt`：
 
 		cp ./aligned_face_0.jpg /home/bupt/
 
@@ -683,7 +683,7 @@
 
 #### 运行`main.lua`对仿射变换后的人脸图片提取特征编码 ####
 
-1. 依次运行以下<font color=#A52A2A>**`3`**</font>条命令：
+1.	依次运行以下<font color=#A52A2A>**`3`**</font>条命令：
 
 		mkdir -p /home/bupt/my_aligned_face/my_face
 
@@ -691,7 +691,7 @@
 
 		/root/openface/batch-represent/main.lua -outDir /home/bupt/my_reps/ -data /home/bupt/my_aligned_face/
 
-1. 运行以上命令之后可在`/home/bupt/my_reps`目录下找到如下相应的128维面部特征编码文件`reps.csv`：
+1.	运行以上命令之后可在`/home/bupt/my_reps`目录下找到如下相应的128维面部特征编码文件`reps.csv`：
 
 	![](https://i.imgur.com/RsTyaaW.png)
 
@@ -705,11 +705,11 @@
 
 #### 运行align-dlib.py进行仿射变换 ####
 
-1. 运行以下<font color=#A52A2A>**`1`**</font>条命令：
+1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
 		/root/openface/util/align-dlib.py /home/bupt/training-images/ align outerEyesAndNose /home/bupt/aligned-images/ --size 96
 
-1. 运行以上命令之后可在/home/bupt/aligned-images目录下找到仿射变换后的图片文件：
+1.	运行以上命令之后可在/home/bupt/aligned-images目录下找到仿射变换后的图片文件：
 
 	![](https://i.imgur.com/h08HjNS.png)
 
@@ -717,21 +717,21 @@
 
 #### 运行main.lua获取128维面部特征向量表示文件 ####
 
-1. 运行以下<font color=#A52A2A>**`1`**</font>条命令：
+1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
 		/root/openface/batch-represent/main.lua -outDir /home/bupt/generated-embeddings/ -data /home/bupt/aligned-images/
 
-1. 运行以上命令之后可在`/home/bupt/generated-embaddings`目录下找到`labels.csv`特征向量标识文件及`reps.csv`特征向量表示文件：
+1.	运行以上命令之后可在`/home/bupt/generated-embaddings`目录下找到`labels.csv`特征向量标识文件及`reps.csv`特征向量表示文件：
 
 	![](https://i.imgur.com/kHfR4tD.png)
 
 #### 运行`classifier.py train`训练样本集并生成分类器 ####
 
-1. 运行以下<font color=#A52A2A>**`1`**</font>条命令：
+1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
 		/root/openface/demos/classifier.py train /home/bupt/generated-embeddings/
 
-1. 运行以上命令之后可在`/home/bupt/generated-embaddings`目录下找到如下`classifier.pkl`分类器文件：
+1.	运行以上命令之后可在`/home/bupt/generated-embaddings`目录下找到如下`classifier.pkl`分类器文件：
 
 	![](https://i.imgur.com/bh7Y5ev.png)
 
@@ -741,7 +741,7 @@
 
 		/root/openface/demos/classifier.py infer /home/bupt/generated-embeddings/classifier.pkl your_test_image_fullpath.jpg
 
-1. 运行以上命令之后会在Terminal命令窗口中显示如下识别结果：
+1.	运行以上命令之后会在Terminal命令窗口中显示如下识别结果：
 
 	![](https://i.imgur.com/MpfSDla.png)
 
