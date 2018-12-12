@@ -691,7 +691,7 @@
 
 		/root/openface/batch-represent/main.lua -outDir /home/bupt/my_reps/ -data /home/bupt/my_aligned_face/
 
-1.	运行以上命令之后可在`/home/bupt/my_reps`目录下找到如下相应的128维面部特征编码文件`reps.csv`：
+1.	运行以上命令之后可在`/home/bupt/my_reps`目录下找到如下相应的`128`维面部特征编码文件`reps.csv`：
 
 	![](https://i.imgur.com/RsTyaaW.png)
 
@@ -715,7 +715,7 @@
 
 	![](https://i.imgur.com/jTfoN0m.png)
 
-#### 运行main.lua获取128维面部特征向量表示文件 ####
+#### 运行`main.lua`获取`128`维面部特征向量表示文件 ####
 
 1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
