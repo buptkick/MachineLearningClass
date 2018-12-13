@@ -3,48 +3,77 @@
 
 # 目录 #
 
-- [准备工作](#准备工作)
+-	[准备工作](#准备工作)
 
-- [实验一、Python机器学习入门：有监督学习](#实验一python机器学习入门有监督学习)
-	- [实验目标](#实验目标)
-	- [实验器材及准备](#实验器材及准备)
-	- [实验内容与步骤](#实验内容与步骤)
-	- [实验结果](#实验结果)
-	- [课后习题](#课后习题)
+-	[实验一、Python机器学习入门：有监督学习](#实验一python机器学习入门有监督学习)
 
-- [实验二、Python机器学习入门：无监督学习](#实验二python机器学习入门无监督学习)
-	- [实验目标](#实验目标-1)
-	- [实验器材及准备](#实验器材及准备-1)
-	- [实验内容与步骤](#实验内容与步骤-1)
-	- [实验结果](#实验结果-1)
-	- [课后习题](#课后习题-1)
+	-	[实验目标](#实验目标)
 
-- [实验三、Python深度学习入门：单层神经网络](#实验三python深度学习入门单层神经网络)
-	- [实验目标](#实验目标-2)
-	- [实验器材及准备](#实验器材及准备-2)
-	- [实验内容与步骤](#实验内容与步骤-2)
-	- [实验结果](#实验结果-2)
-	- [课后习题](#课后习题-2)
+	-	[实验器材及准备](#实验器材及准备)
 
-- [实验四、Python深度学习入门：人脸识别实验](#实验四python深度学习入门人脸识别实验)
-	- [实验目标](#实验目标-3)
-	- [实验器材及准备](#实验器材及准备-3)
-	- [实验内容与步骤](#实验内容与步骤-3)
-		- [实验环境及数据准备](#实验环境及数据准备)
-		- [从照片中获取人脸](#从照片中获取人脸)
-		- [获取脸部特征并进行仿射变换](#获取脸部特征并进行仿射变换)
-		- [获取面部特征编码文件](#获取面部特征编码文件)
-		- [进行完整的人脸识别实验](#进行完整的人脸识别实验)
+	-	[实验内容与步骤](#实验内容与步骤)
+
+	-	[实验结果](#实验结果)
+
+	-	[课后习题](#课后习题)
+
+-	[实验二、Python机器学习入门：无监督学习](#实验二python机器学习入门无监督学习)
+	
+	-	[实验目标](#实验目标-1)
+
+	-	[实验器材及准备](#实验器材及准备-1)
+
+	-	[实验内容与步骤](#实验内容与步骤-1)
+
+	-	[实验结果](#实验结果-1)
+
+	-	[课后习题](#课后习题-1)
+
+-	[实验三、Python深度学习入门：单层神经网络](#实验三python深度学习入门单层神经网络)
+
+	-	[实验目标](#实验目标-2)
+
+	-	[实验器材及准备](#实验器材及准备-2)
+
+	-	[实验内容与步骤](#实验内容与步骤-2)
+
+	-	[实验结果](#实验结果-2)
+
+	-	[课后习题](#课后习题-2)
+
+-	[实验四、Python深度学习入门：人脸识别实验](#实验四python深度学习入门人脸识别实验)
+
+	-	[实验目标](#实验目标-3)
+
+	-	[实验器材及准备](#实验器材及准备-3)
+
+	-	[实验内容与步骤](#实验内容与步骤-3)
+
+		-	[实验环境及数据准备](#实验环境及数据准备)
+
+		-	[从照片中获取人脸](#从照片中获取人脸)
+
+		-	[获取脸部特征并进行仿射变换](#获取脸部特征并进行仿射变换)
+
+		-	[获取面部特征编码文件](#获取面部特征编码文件)
+
+		-	[进行完整的人脸识别实验](#进行完整的人脸识别实验)
 
 -	[Jupyter环境部署](https://github.com/buptkick/MachineLearningClass/tree/master/Jupyter)
-	-	[Anaconda安装](https://github.com/buptkick/MachineLearningClass/tree/master/Jupyter#anaconda安装)
-	-	[TensorFlow安装](https://github.com/buptkick/MachineLearningClass/tree/master/Jupyter#tensorflow安装)
+
+	-	[Anaconda安装](#anaconda安装)
+
+	-	[TensorFlow安装](#tensorflow安装)
 
 -	[Docker环境部署](https://github.com/buptkick/MachineLearningClass/tree/master/Docker)
-	-	[Docker安装](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker安装)
-	-	[Docker加速器](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker加速器)
-	-	[Docker从文件载入镜像](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker从文件载入镜像)
-	-	[Docker运行命令](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker运行命令)
+
+	-	[Docker安装](#docker安装)
+
+	-	[Docker加速器](#docker加速器)
+
+	-	[Docker从文件载入镜像](#docker从文件载入镜像)
+
+	-	[Docker运行命令](#docker运行命令)
 
 ----------
 
