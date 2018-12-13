@@ -30,9 +30,14 @@
 
 		conda –version
 
+-	可以通过以下命令查看Anaconda组件：
+
+		conda list
+
+-	Python版本：`3.6.3`
 
 ## TensorFlow安装 ##
-    conda install tensorflow==1.3.0
 
-## Python版本 ##
-	Python 3.6.3
+-	安装好Anaconda后，运行以下命令安装1.3.0版本TensorFlow：
+
+		conda install tensorflow==1.3.0
