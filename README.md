@@ -59,21 +59,21 @@
 
 		-	[进行完整的人脸识别实验](#进行完整的人脸识别实验)
 
--	[Jupyter环境部署](tree/master/Jupyter)
+-	[Jupyter环境部署](Jupyter)
 
-	-	[Anaconda安装](tree/master/Jupyter#anaconda安装)
+	-	[Anaconda安装](Jupyter#anaconda安装)
 
-	-	[TensorFlow安装](tree/master/Jupyter#tensorflow安装)
+	-	[TensorFlow安装](Jupyter#tensorflow安装)
 
--	[Docker环境部署](tree/master/Docker)
+-	[Docker环境部署](Docker)
 
-	-	[Docker安装](tree/master/Docker#docker安装)
+	-	[Docker安装](Docker#docker安装)
 
-	-	[Docker加速器](tree/master/Docker#docker加速器)
+	-	[Docker加速器](Docker#docker加速器)
 
-	-	[Docker从文件载入镜像](tree/master/Docker#docker从文件载入镜像)
+	-	[Docker从文件载入镜像](Docker#docker从文件载入镜像)
 
-	-	[Docker运行命令](tree/master/Docker#docker运行命令)
+	-	[Docker运行命令](Docker#docker运行命令)
 
 ----------
 
