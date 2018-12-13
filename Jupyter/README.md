@@ -1,10 +1,14 @@
 ## Anaconda安装 ##
 
+-	Anaconda Linux 64位安装程序`Anaconda3-5.0.1-Linux-x86_64.sh`下载：
+
 >下载地址：[百度云盘](https://pan.baidu.com/s/1w90tNSWkDeb57w6NGpdumw )
 
 >提取码：`ysc6` 
 
-    bash Anaconda3-5.0.1-Linux-x86_64.sh
+-	Anaconda安装命令：
+
+    	bash Anaconda3-5.0.1-Linux-x86_64.sh
 
 -	安装完成之后需要重启`Terminal`终端，Anaconda才能生效。
 
