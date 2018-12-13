@@ -37,8 +37,14 @@
 		- [进行完整的人脸识别实验](#进行完整的人脸识别实验)
 
 -	[Jupyter环境部署](https://github.com/buptkick/MachineLearningClass/tree/master/Jupyter)
+	-	[Anaconda安装](https://github.com/buptkick/MachineLearningClass/tree/master/Jupyter#anacondaz安装)
+	-	[TensorFlow安装](https://github.com/buptkick/MachineLearningClass/tree/master/Jupyter#tensorflow安装)
 
 -	[Docker环境部署](https://github.com/buptkick/MachineLearningClass/tree/master/Docker)
+	-	[Docker安装](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker安装)
+	-	[Docker加速器](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker加速器)
+	-	[Docker从文件载入镜像](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker从文件载入镜像)
+	-	[Docker运行命令](https://github.com/buptkick/MachineLearningClass/tree/master/Docker/#docker运行命令)
 
 ----------
 
