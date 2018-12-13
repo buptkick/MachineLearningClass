@@ -4,7 +4,7 @@
 
 		sudo apt install docker.io
 
--	离线安装命令，进入对应版本目录后可输入以下命令安装：
+-	离线安装命令，使用`cd`命令进入对应版本目录后可输入以下命令安装：
 
 		sudo dpkg -i *.deb
 
@@ -16,9 +16,11 @@
 
 ## Docker从文件载入镜像 ##
 
->镜像下载地址：[百度云盘](https://pan.baidu.com/s/1w90tNSWkDeb57w6NGpdumw )
+-	`openfaceallset.tar`镜像文件下载：
 
->提取码：`ysc6`
+	>下载地址：[百度云盘](https://pan.baidu.com/s/1NLzLCBm1Ub9Hxw93t0cXkQ)
+
+	>提取码：`5uow`
 
 -	载入镜像命令：
 
