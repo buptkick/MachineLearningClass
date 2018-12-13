@@ -2,7 +2,7 @@
 
 -	Anaconda Linux 64位安装程序`Anaconda3-5.0.1-Linux-x86_64.sh`下载：
 
-	>下载地址：[百度云盘](https://pan.baidu.com/s/1w90tNSWkDeb57w6NGpdumw )
+	>下载地址：[百度云盘](https://pan.baidu.com/s/1w90tNSWkDeb57w6NGpdumw)
 
 	>提取码：`ysc6` 
 
@@ -22,7 +22,7 @@
 
 		export PATH=/home/bupt/anaconda3/bin:$PATH
 
--	`Ctrl`+`S`保存，然后退出`Gedit`。
+-	`Ctrl`+`S`保存修改，然后退出`Gedit`。
 
 -	重启`Terminal`终端，如果还是不行，则重启Linux系统。
 
