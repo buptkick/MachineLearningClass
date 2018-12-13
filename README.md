@@ -36,6 +36,10 @@
 		- [获取面部特征编码文件](#获取面部特征编码文件)
 		- [进行完整的人脸识别实验](#进行完整的人脸识别实验)
 
+-	[Jupyter环境部署](https://github.com/buptkick/MachineLearningClass/tree/master/Jupyter)
+
+-	[Docker环境部署](https://github.com/buptkick/MachineLearningClass/tree/master/Docker)
+
 ----------
 
 # 准备工作 #
