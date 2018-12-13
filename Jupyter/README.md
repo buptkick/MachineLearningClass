@@ -38,6 +38,6 @@
 
 ## TensorFlow安装 ##
 
--	安装好Anaconda后，运行以下命令安装1.3.0版本TensorFlow：
+-	安装好Anaconda后，运行以下命令安装`1.3.0`版本TensorFlow：
 
 		conda install tensorflow==1.3.0
