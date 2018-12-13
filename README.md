@@ -100,7 +100,7 @@
 
 	![](https://i.imgur.com/PZYQqSc.png)
 
-1.	点击页面右上方区域按钮`new`->`python3`
+1.	点击页面右上方区域按钮`New`->`Python3`。
 
 1.	将`exper1.txt`文件中代码复制入`In[]:`后光标中，键入`Shift`+`Enter`运行。
 
@@ -232,7 +232,7 @@
 
 ## 实验内容与步骤 ##
 
-1.	打开编译环境。如实验一打开Jupyter Notebook，新建`new`->`python3`交互窗口。
+1.	打开编译环境。如实验一打开Jupyter Notebook，新建`New`->`Python3`交互窗口。
 
 2. 代码文件`exper2.txt`中实现了以下步骤，详见**代码注释**：
 
@@ -404,7 +404,7 @@
 
 ## 实验内容与步骤 ##
 
-1.	打开编译环境。如实验一打开Jupyter Notebook，新建`new`->`python3`交互窗口。
+1.	打开编译环境。如实验一打开Jupyter Notebook，新建`New`->`Python3`交互窗口。
 
 1.	代码文件`exper3.txt`中实现了以下步骤，详见**代码注释**：
 
