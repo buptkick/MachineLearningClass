@@ -117,9 +117,9 @@
 
 ### 实验准备 ###
 
--	查阅机器学习-监督学习[基本原理和算法](http://sklearn.apachecn.org/cn/0.19.0/tutorial/statistical_inference/supervised_learning.html)
+-	查阅机器学习-监督学习[基本原理和算法](http://sklearn.apachecn.org/#/docs/1)
 
--	查阅SVM分类器[基本原理](http://sklearn.apachecn.org/cn/0.19.0/modules/svm.html)
+-	查阅SVM分类器[基本原理](http://sklearn.apachecn.org/#/docs/5)
 
 ## 实验内容与步骤 ##
 
@@ -265,9 +265,9 @@
 
 ### 实验准备 ###
 
--	查阅机器学习-无监督学习[基本原理和相关算法](http://sklearn.apachecn.org/cn/0.19.0/tutorial/statistical_inference/unsupervised_learning.html)
+-	查阅机器学习-无监督学习[基本原理和相关算法](http://sklearn.apachecn.org/#/docs/19)
 
--	查阅聚类基本原理及K-means[算法原理](http://sklearn.apachecn.org/cn/0.19.0/modules/clustering.html)
+-	查阅聚类基本原理及K-means[算法原理](http://sklearn.apachecn.org/#/docs/22)
 
 ## 实验内容与步骤 ##
 
