@@ -2,9 +2,9 @@
 
 -	Anaconda Linux 64位安装程序`Anaconda3-5.0.1-Linux-x86_64.sh`下载：
 
->下载地址：[百度云盘](https://pan.baidu.com/s/1w90tNSWkDeb57w6NGpdumw )
+	>下载地址：[百度云盘](https://pan.baidu.com/s/1w90tNSWkDeb57w6NGpdumw )
 
->提取码：`ysc6` 
+	>提取码：`ysc6` 
 
 -	Anaconda安装命令：
 
