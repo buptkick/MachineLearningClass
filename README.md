@@ -42,34 +42,35 @@
 
 -	[实验四、Python深度学习入门：人脸识别实验](#实验四python深度学习入门人脸识别实验)
 
-  -	[实验目标](#实验目标-3)
+	-	[实验目标](#实验目标-3)
 
-  -	[实验器材及准备](#实验器材及准备-3)
+	-	[实验器材及准备](#实验器材及准备-3)
 
-  -	[实验内容与步骤](#实验内容与步骤-3)
-        -	[实验环境及数据准备](#实验环境及数据准备)
+	-	[实验内容与步骤](#实验内容与步骤-3)
+        
+		-	[实验环境及数据准备](#实验环境及数据准备)
 
-            -	[从照片中获取人脸](#从照片中获取人脸)
+        -	[从照片中获取人脸](#从照片中获取人脸)
 
-                -	[获取脸部特征并进行仿射变换](#获取脸部特征并进行仿射变换)
+        -	[获取脸部特征并进行仿射变换](#获取脸部特征并进行仿射变换)
 
-                    -	[获取面部特征编码文件](#获取面部特征编码文件)
+        -	[获取面部特征编码文件](#获取面部特征编码文件)
 
-                        -	[进行完整的人脸识别实验](#进行完整的人脸识别实验)
+        -	[进行完整的人脸识别实验](#进行完整的人脸识别实验)
 
 -	[Jupyter环境部署](Jupyter)
-  -	[Anaconda安装](Jupyter#anaconda安装)
+	-	[Anaconda安装](Jupyter#anaconda安装)
 
-  -	[TensorFlow安装](Jupyter#tensorflow安装)
+	-	[TensorFlow安装](Jupyter#tensorflow安装)
 
 -	[Docker环境部署](Docker)
-  -	[Docker安装](Docker#docker安装)
+	-	[Docker安装](Docker#docker安装)
 
-  -	[Docker加速器](Docker#docker加速器)
+	-	[Docker加速器](Docker#docker加速器)
 
-  -	[Docker从文件载入镜像](Docker#docker从文件载入镜像)
+	-	[Docker从文件载入镜像](Docker#docker从文件载入镜像)
 
-  -	[Docker运行命令](Docker#docker运行命令)
+	-	[Docker运行命令](Docker#docker运行命令)
 
 ----------
 
@@ -303,7 +304,7 @@ plt.show()
 
 ## 课后习题 ##
 
--	参考k-means[参数表](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans)修改k-means参数，如**分类器**初始化类型（`k-means++`、`random`、`PCA-based`）、类别数`n_clusters`等，观察聚类结果变化情况。
+-	参考[K-Means参数表](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans)修改k-means参数，如**分类器**初始化类型（`k-means++`、`random`、`PCA-based`）、类别数`n_clusters`等，观察聚类结果变化情况。
 
 	![](https://i.imgur.com/eEP75zg.png)
 
