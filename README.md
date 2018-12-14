@@ -311,6 +311,8 @@
 
 **附**`expert2.txt`文件内容如下：
 
+```py
+
 	print(__doc__)
 
 	from time import time
@@ -418,6 +420,8 @@
 	plt.xticks(())
 	plt.yticks(())
 	plt.show()
+
+```
 
 ----------
 
