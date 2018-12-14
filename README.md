@@ -533,7 +533,7 @@
 	    batch_xs, batch_ys = mnist.train.next_batch(100)
 	    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 	    if i%100==0:
-		print("cross_entropy error:",sess.run(cross_entropy, feed_dict={x: batch_xs, y_: batch_ys}))
+		    print("cross_entropy error:",sess.run(cross_entropy, feed_dict={x: batch_xs, y_: batch_ys}))
 
 	# 测试训练好的模型
 	correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
