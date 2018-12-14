@@ -133,7 +133,9 @@
 
 1.	在终端窗口中输入以下<font color=#A52A2A>**`1`**</font>条命令打开Jupyter Notebook编译环境：
 
-		jupyter notebook
+	```bash
+	jupyter notebook
+	```
 
 1.	键入`Enter`回车键后等待，浏览器会自动打开如下地址：
 
