@@ -116,7 +116,7 @@
 
 ### 实验准备 ###
 
--	查阅机器学习-监督学习[基本原理和算法](http://sklearn.apachecn.org/#/docs/1)
+-	查阅机器学习-有监督学习[基本原理和算法](http://sklearn.apachecn.org/#/docs/1)
 
 -	查阅SVM分类器[基本原理](http://sklearn.apachecn.org/#/docs/5)
 
@@ -306,7 +306,7 @@ plt.show()
 
 ## 课后习题 ##
 
--	参考[K-Means参数表](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans)修改k-means参数，如**分类器**初始化类型（`k-means++`、`random`、`PCA-based`）、类别数`n_clusters`等，观察聚类结果变化情况。
+-	参考[K-Means参数表](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans)修改K-Means参数，如**分类器**初始化类型（`k-means++`、`random`、`PCA-based`）、类别数`n_clusters`等，观察聚类结果变化情况。
 
 	![](https://i.imgur.com/eEP75zg.png)
 
