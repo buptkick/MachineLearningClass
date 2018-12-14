@@ -311,7 +311,7 @@
 
 **附**`expert2.txt`文件内容如下：
 
-```py
+```python
 
 	print(__doc__)
 
