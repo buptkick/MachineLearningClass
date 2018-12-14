@@ -181,69 +181,71 @@
 
 **附**`expert1.txt`文件内容如下：
 
-	print(__doc__)
+```python
+print(__doc__)
 
-	# Author: Gael Varoquaux <gael dot varoquaux at normalesup dot org>
-	# License: BSD 3 clause
+# Author: Gael Varoquaux <gael dot varoquaux at normalesup dot org>
+# License: BSD 3 clause
 
-	# Standard scientific Python imports
-	import matplotlib.pyplot as plt
+# Standard scientific Python imports
+import matplotlib.pyplot as plt
 
-	# Import datasets, classifiers and performance metrics
-	from sklearn import datasets, svm, metrics
+# Import datasets, classifiers and performance metrics
+from sklearn import datasets, svm, metrics
 
-	# The digits dataset
-	# 加载数据集
-	digits = datasets.load_digits()
+# The digits dataset
+# 加载数据集
+digits = datasets.load_digits()
 
-	# The data that we are interested in is made of 8x8 images of digits, let's
-	# have a look at the first 4 images, stored in the `images` attribute of the
-	# dataset.  If we were working from image files, we could load them using
-	# matplotlib.pyplot.imread.  Note that each image must have the same size. For these
-	# images, we know which digit they represent: it is given in the 'target' of
-	# the dataset.
-	# 查看前4张图片
-	images_and_labels = list(zip(digits.images, digits.target))
-	for index, (image, label) in enumerate(images_and_labels[:4]):
-	    plt.subplot(2, 4, index + 1)
-	    plt.axis('off')
-	    plt.imshow(image, cmap=plt.cm.gray_r, interpolation='nearest')
-	    plt.title('Training: %i' % label)
+# The data that we are interested in is made of 8x8 images of digits, let's
+# have a look at the first 4 images, stored in the `images` attribute of the
+# dataset.  If we were working from image files, we could load them using
+# matplotlib.pyplot.imread.  Note that each image must have the same size. For these
+# images, we know which digit they represent: it is given in the 'target' of
+# the dataset.
+# 查看前4张图片
+images_and_labels = list(zip(digits.images, digits.target))
+for index, (image, label) in enumerate(images_and_labels[:4]):
+    plt.subplot(2, 4, index + 1)
+    plt.axis('off')
+    plt.imshow(image, cmap=plt.cm.gray_r, interpolation='nearest')
+    plt.title('Training: %i' % label)
 
-	# To apply a classifier on this data, we need to flatten the image, to
-	# turn the data in a (samples, feature) matrix:
-	# 数据预处理：展开成向量
-	n_samples = len(digits.images)
-	data = digits.images.reshape((n_samples, -1))
+# To apply a classifier on this data, we need to flatten the image, to
+# turn the data in a (samples, feature) matrix:
+# 数据预处理：展开成向量
+n_samples = len(digits.images)
+data = digits.images.reshape((n_samples, -1))
 
-	# Create a classifier: a support vector classifier
-	# 构建分类器SVM
-	classifier = svm.SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-	  degree=3, gamma=0.001, kernel='rbf',
-	  max_iter=-1, probability=False, random_state=None, shrinking=True,
-	  tol=0.001, verbose=False)
+# Create a classifier: a support vector classifier
+# 构建分类器SVM
+classifier = svm.SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  degree=3, gamma=0.001, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
 
-	# We learn the digits on the first half of the digits
-	# 训练分类器
-	classifier.fit(data[:n_samples // 2], digits.target[:n_samples // 2])
+# We learn the digits on the first half of the digits
+# 训练分类器
+classifier.fit(data[:n_samples // 2], digits.target[:n_samples // 2])
 
-	# Now predict the value of the digit on the second half:
-	# 测试分类效果
-	expected = digits.target[n_samples // 2:]
-	predicted = classifier.predict(data[n_samples // 2:])
+# Now predict the value of the digit on the second half:
+# 测试分类效果
+expected = digits.target[n_samples // 2:]
+predicted = classifier.predict(data[n_samples // 2:])
 
-	print("Classification report for classifier %s:\n%s\n"
-	      % (classifier, metrics.classification_report(expected, predicted)))
-	print("Confusion matrix:\n%s" % metrics.confusion_matrix(expected, predicted))
+print("Classification report for classifier %s:\n%s\n"
+      % (classifier, metrics.classification_report(expected, predicted)))
+print("Confusion matrix:\n%s" % metrics.confusion_matrix(expected, predicted))
 
-	images_and_predictions = list(zip(digits.images[n_samples // 2:], predicted))
-	for index, (image, prediction) in enumerate(images_and_predictions[:4]):
-	    plt.subplot(2, 4, index + 5)
-	    plt.axis('off')
-	    plt.imshow(image, cmap=plt.cm.gray_r, interpolation='nearest')
-	    plt.title('Prediction: %i' % prediction)
+images_and_predictions = list(zip(digits.images[n_samples // 2:], predicted))
+for index, (image, prediction) in enumerate(images_and_predictions[:4]):
+    plt.subplot(2, 4, index + 5)
+    plt.axis('off')
+    plt.imshow(image, cmap=plt.cm.gray_r, interpolation='nearest')
+    plt.title('Prediction: %i' % prediction)
 
-	plt.show()
+plt.show()
+```
 
 ----------
 
@@ -487,74 +489,78 @@ plt.show()
 
 `part1`:
 
-	"""A very simple MNIST classifier.
-	See extensive documentation at
-	https://www.tensorflow.org/get_started/mnist/beginners
-	"""
-	# part1
-	from __future__ import absolute_import
-	from __future__ import division
-	from __future__ import print_function
+```python
+"""A very simple MNIST classifier.
+See extensive documentation at
+https://www.tensorflow.org/get_started/mnist/beginners
+"""
+# part1
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
-	import argparse
-	import sys
+import argparse
+import sys
 
-	from tensorflow.examples.tutorials.mnist import input_data
-	import matplotlib.pyplot as plt
-	import tensorflow as tf
+from tensorflow.examples.tutorials.mnist import input_data
+import matplotlib.pyplot as plt
+import tensorflow as tf
 
-	# 载入数据
-	mnist = input_data.read_data_sets("/tmp/tensorflow/mnist/input_data", one_hot=True)
+# 载入数据
+mnist = input_data.read_data_sets("/tmp/tensorflow/mnist/input_data", one_hot=True)
 
-	# 构建单层神经网络
-	x = tf.placeholder(tf.float32, [None, 784])
-	W = tf.Variable(tf.zeros([784, 10]))
-	b = tf.Variable(tf.zeros([10]))
-	y = tf.matmul(x, W) + b
+# 构建单层神经网络
+x = tf.placeholder(tf.float32, [None, 784])
+W = tf.Variable(tf.zeros([784, 10]))
+b = tf.Variable(tf.zeros([10]))
+y = tf.matmul(x, W) + b
 
-	# 定义损失函数和优化器
-	y_ = tf.placeholder(tf.float32, [None, 10])
+# 定义损失函数和优化器
+y_ = tf.placeholder(tf.float32, [None, 10])
 
-	# The raw formulation of cross-entropy,
-	#
-	#   tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(tf.nn.softmax(y)),
-	#                                 reduction_indices=[1]))
-	#
-	# can be numerically unstable.
-	#
-	# So here we use tf.nn.softmax_cross_entropy_with_logits on the raw
-	# outputs of 'y', and then average across the batch.
-	cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))
-	# 注意learning_rate
-	train_step = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cross_entropy)
+# The raw formulation of cross-entropy,
+#
+#   tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(tf.nn.softmax(y)),
+#                                 reduction_indices=[1]))
+#
+# can be numerically unstable.
+#
+# So here we use tf.nn.softmax_cross_entropy_with_logits on the raw
+# outputs of 'y', and then average across the batch.
+cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))
+# 注意learning_rate
+train_step = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cross_entropy)
 
-	sess = tf.InteractiveSession()
-	tf.global_variables_initializer().run()
-	# 训练模型:range内迭代次数
-	for i in range(1000):
-	    batch_xs, batch_ys = mnist.train.next_batch(100)
-	    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
-	    if i%100==0:
-		    print("cross_entropy error:",sess.run(cross_entropy, feed_dict={x: batch_xs, y_: batch_ys}))
+sess = tf.InteractiveSession()
+tf.global_variables_initializer().run()
+# 训练模型:range内迭代次数
+for i in range(1000):
+    batch_xs, batch_ys = mnist.train.next_batch(100)
+    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
+    if i%100==0:
+	    print("cross_entropy error:",sess.run(cross_entropy, feed_dict={x: batch_xs, y_: batch_ys}))
 
-	# 测试训练好的模型
-	correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
-	accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-	print("test accuracy: ",sess.run(accuracy, feed_dict={x: mnist.test.images,
-					  y_: mnist.test.labels}))
+# 测试训练好的模型
+correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+print("test accuracy: ",sess.run(accuracy, feed_dict={x: mnist.test.images,
+				  y_: mnist.test.labels}))
+```
 
 `part2`:
 
-	# part2 ：选择图片测试
-	# 第几张图片？
-	p = 0
+```python
+# part2 ：选择图片测试
+# 第几张图片？
+p = 0
 
-	s = sess.run(y,feed_dict={x: mnist.test.images[p].reshape(1,784)})
-	print("Prediction : ",sess.run(tf.argmax(s, 1)))
+s = sess.run(y,feed_dict={x: mnist.test.images[p].reshape(1,784)})
+print("Prediction : ",sess.run(tf.argmax(s, 1)))
 
-	#显示图片
-	plt.imshow(mnist.test.images[p].reshape(28,28), cmap=plt.cm.gray_r, interpolation='nearest')
-	plt.show()
+#显示图片
+plt.imshow(mnist.test.images[p].reshape(28,28), cmap=plt.cm.gray_r, interpolation='nearest')
+plt.show()
+```
 
 ----------
 
