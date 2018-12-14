@@ -1,4 +1,3 @@
-
 ----------
 
 # 目录 #
@@ -43,37 +42,34 @@
 
 -	[实验四、Python深度学习入门：人脸识别实验](#实验四python深度学习入门人脸识别实验)
 
-	-	[实验目标](#实验目标-3)
+  -	[实验目标](#实验目标-3)
 
-	-	[实验器材及准备](#实验器材及准备-3)
+  -	[实验器材及准备](#实验器材及准备-3)
 
-	-	[实验内容与步骤](#实验内容与步骤-3)
+  -	[实验内容与步骤](#实验内容与步骤-3)
+        -	[实验环境及数据准备](#实验环境及数据准备)
 
-		-	[实验环境及数据准备](#实验环境及数据准备)
+            -	[从照片中获取人脸](#从照片中获取人脸)
 
-		-	[从照片中获取人脸](#从照片中获取人脸)
+                -	[获取脸部特征并进行仿射变换](#获取脸部特征并进行仿射变换)
 
-		-	[获取脸部特征并进行仿射变换](#获取脸部特征并进行仿射变换)
+                    -	[获取面部特征编码文件](#获取面部特征编码文件)
 
-		-	[获取面部特征编码文件](#获取面部特征编码文件)
-
-		-	[进行完整的人脸识别实验](#进行完整的人脸识别实验)
+                        -	[进行完整的人脸识别实验](#进行完整的人脸识别实验)
 
 -	[Jupyter环境部署](Jupyter)
+  -	[Anaconda安装](Jupyter#anaconda安装)
 
-	-	[Anaconda安装](Jupyter#anaconda安装)
-
-	-	[TensorFlow安装](Jupyter#tensorflow安装)
+  -	[TensorFlow安装](Jupyter#tensorflow安装)
 
 -	[Docker环境部署](Docker)
+  -	[Docker安装](Docker#docker安装)
 
-	-	[Docker安装](Docker#docker安装)
+  -	[Docker加速器](Docker#docker加速器)
 
-	-	[Docker加速器](Docker#docker加速器)
+  -	[Docker从文件载入镜像](Docker#docker从文件载入镜像)
 
-	-	[Docker从文件载入镜像](Docker#docker从文件载入镜像)
-
-	-	[Docker运行命令](Docker#docker运行命令)
+  -	[Docker运行命令](Docker#docker运行命令)
 
 ----------
 
@@ -626,9 +622,13 @@ plt.show()
 
 1.	在`Terminal`命令行窗口中依次运行以下<font color=#A52A2A>**`2`**</font>条命令进入Docker容器openface环境内：
 
-		sudo xhost +local:root
+	```bash
+	sudo xhost +local:root
+	```
 
-		sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /home/$USER:/home/$USER:rw -t -i openface/allset /bin/bash
+	```bash
+	sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /home/$USER:/home/$USER:rw -t -i openface/allset /bin/bash
+	```
 
 1.	运行以上第<font color=#A52A2A>`1`</font>条命令后会被要求输入管理员密码，密码为<font color=#A52A2A>`123456`</font>，在输入密码时`Terminal`命令行窗口中<font color=#A52A2A>**不会显示密码输入**</font>，在确认输入无误后单击回车`Enter`按钮即可，若显示如下信息则表示第<font color=#A52A2A>`1`</font>条命令运行成功，可以继续输入第<font color=#A52A2A>`2`</font>条命令：
 
@@ -636,33 +636,49 @@ plt.show()
 
 1.	运行完以上<font color=#A52A2A>**`2`**</font>条命令进入Docker容器后，运行以下<font color=#A52A2A>**`1`**</font>条命令转至 **openface工作目录**`/root/openface` （<font color=#A52A2A>**`！！！重要！！！`**</font>）：
 
-		cd /root/openface
+	```bash
+	cd /root/openface
+	```
 
 1.	运行以下<font color=#A52A2A>**`4`**</font>条命令清除示例样本文件（若提示文件不存在则可忽略）：
 
-		rm /root/openface/aligned_face_0.jpg
+	```bash
+	rm /root/openface/aligned_face_0.jpg
+	```
 
-		rm -r /home/bupt/training-images
+	```bash
+	rm -r /home/bupt/training-images
+	```
 
-		rm -r /home/bupt/aligned-images
+	```bash
+	rm -r /home/bupt/aligned-images
+	```
 
-		rm -r /home/bupt/generated-embeddings
+	```bash
+	rm -r /home/bupt/generated-embeddings
+	```
 
 #### 建立人脸样本库 ####
 
 1.	运行以下<font color=#A52A2A>**`1`**</font>条命令（**或者**使用鼠标左键单击左边栏图标![](https://i.imgur.com/G2jr5vR.png)手动进入bupt用户主目录`/home/bupt`内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建`training-images`文件夹（若提示目录已存在则可忽略）：
 
-		mkdir -vm 777 /home/bupt/training-images
+	```bash
+	mkdir -vm 777 /home/bupt/training-images
+	```
 
 1.	运行类似以下命令语句（**或者**使用鼠标左键双击文件夹图标![](https://i.imgur.com/r7fF9KI.png)进入`/home/bupt/training-images/`目录内，再使用鼠标右键菜单新建文件夹`New Folder`选项）创建各个（<font color=#A52A2A>**必须`2`个以上**</font>）不同人的样本库文件夹，把以下命令中的`person1`、`person2`、`person3`等各自改为你自定义的名称后再运行，例如你自己的名字、你朋友的名字、你喜欢的明星的名字等：
 
-		mkdir -vm 777 /home/bupt/training-images/person1
+	```bash
+	mkdir -vm 777 /home/bupt/training-images/person1
+	```
 
-		mkdir -vm 777 /home/bupt/training-images/person2
+	```bash
+	mkdir -vm 777 /home/bupt/training-images/person2
+	```
 
-		mkdir -vm 777 /home/bupt/training-images/person3
-
-		...
+	```bash
+	mkdir -vm 777 /home/bupt/training-images/person3
+	```
 
 	![](https://i.imgur.com/iXEOeL6.png)
 
@@ -692,7 +708,9 @@ plt.show()
 
 1.	把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
 
-		python /root/openface/step-1_find-faces.py your_test_image_fullpath.jpg
+	```bash
+	python /root/openface/step-1_find-faces.py your_test_image_fullpath.jpg
+	```
 
 1.	运行以上命令之后会显示如下类似图片结果：
 
@@ -708,7 +726,9 @@ plt.show()
 
 1.	把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整图片路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
 
-		python /root/openface/step-2a_finding-face-landmarks.py your_test_image_fullpath.jpg
+	```bash
+	python /root/openface/step-2a_finding-face-landmarks.py your_test_image_fullpath.jpg
+	```
 
 1.	运行以上命令之后会显示如下类似图片结果：
 
@@ -720,13 +740,17 @@ plt.show()
 
 1.	把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整图片路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
 
-		python /root/openface/step-2b_projecting-faces.py your_test_image_fullpath.jpg
+	```bash
+	python /root/openface/step-2b_projecting-faces.py your_test_image_fullpath.jpg
+	```
 
 1.	运行以上命令之后会在工作目录`/root/openface`下生成如下相应的裁剪图片文件`aligned_face_0.jpg`：
 
 1.	可运行以下<font color=#A52A2A>**`1`**</font>条命令把裁剪后的图片文件`aligned_face_0.jpg`拷贝至bupt用户主目录`/home/bupt`：
 
-		cp /root/openface/aligned_face_0.jpg /home/bupt/
+	```bash
+	cp /root/openface/aligned_face_0.jpg /home/bupt/
+	```
 
 	然后在主目录**双击**打开![](https://i.imgur.com/4Vn1zKX.png)查看：
 
@@ -740,11 +764,17 @@ plt.show()
 
 1.	依次运行以下<font color=#A52A2A>**`3`**</font>条命令：
 
-		mkdir -p /home/bupt/my_aligned_face/my_face
+	```bash
+	mkdir -p /home/bupt/my_aligned_face/my_face
+	```
 
-		cp /root/openface/aligned_face_0.jpg /home/bupt/my_aligned_face/my_face/
+	```bash
+	cp /root/openface/aligned_face_0.jpg /home/bupt/my_aligned_face/my_face/
+	```
 
-		/root/openface/batch-represent/main.lua -outDir /home/bupt/my_reps/ -data /home/bupt/my_aligned_face/
+	```bash
+	/root/openface/batch-represent/main.lua -outDir /home/bupt/my_reps/ -data /home/bupt/my_aligned_face/
+	```
 
 1.	运行以上命令之后可在`/home/bupt/my_reps`目录下找到如下相应的`128`维面部特征编码文件`reps.csv`：
 
@@ -762,7 +792,9 @@ plt.show()
 
 1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
-		/root/openface/util/align-dlib.py /home/bupt/training-images/ align outerEyesAndNose /home/bupt/aligned-images/ --size 96
+	```bash
+	/root/openface/util/align-dlib.py /home/bupt/training-images/ align outerEyesAndNose /home/bupt/aligned-images/ --size 96
+	```
 
 1.	运行以上命令之后可在`/home/bupt/aligned-images`目录下找到仿射变换后的图片文件：
 
@@ -774,7 +806,9 @@ plt.show()
 
 1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
-		/root/openface/batch-represent/main.lua -outDir /home/bupt/generated-embeddings/ -data /home/bupt/aligned-images/
+	```bash
+	/root/openface/batch-represent/main.lua -outDir /home/bupt/generated-embeddings/ -data /home/bupt/aligned-images/
+	```
 
 1.	运行以上命令之后可在`/home/bupt/generated-embaddings`目录下找到`labels.csv`特征向量标识文件及`reps.csv`特征向量表示文件：
 
@@ -784,7 +818,9 @@ plt.show()
 
 1.	运行以下<font color=#A52A2A>**`1`**</font>条命令：
 
-		/root/openface/demos/classifier.py train /home/bupt/generated-embeddings/
+	```bash
+	/root/openface/demos/classifier.py train /home/bupt/generated-embeddings/
+	```
 
 1.	运行以上命令之后可在`/home/bupt/generated-embaddings`目录下找到如下`classifier.pkl`分类器文件：
 
@@ -794,7 +830,9 @@ plt.show()
 
 1.	把以下<font color=#A52A2A>**`1`**</font>条命令中的`your_test_image_fullpath.jpg`替换为你自己准备的待测图片包含**文件名及全路径**的<font color=#A52A2A>**完整图片路径**</font>，例如：`/home/bupt/my_pic.jpg`，再运行命令：
 
-		/root/openface/demos/classifier.py infer /home/bupt/generated-embeddings/classifier.pkl your_test_image_fullpath.jpg
+	```bash
+	/root/openface/demos/classifier.py infer /home/bupt/generated-embeddings/classifier.pkl your_test_image_fullpath.jpg
+	```
 
 1.	运行以上命令之后会在`Terminal`命令窗口中显示类似如下识别结果：
 
