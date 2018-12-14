@@ -440,11 +440,11 @@ plt.show()
 
 -	硬件：电脑PC一台
 
--	软件：Ubuntu、Anaconda3 5.0.1、Tensorflow 1.3.0及其依赖包
+-	软件：Ubuntu、Anaconda3 5.0.1、TensorFlow 1.3.0及其依赖包
 
 ### 实验准备 ###
 
--	查阅深度学习与MNIST数据集[基本原理和相关算法](https://www.tensorflow.org/get_started/mnist/beginners)
+-	查阅深度学习与TensorFlow[基本原理和相关算法](https://www.tensorflow.org/get_started/mnist/beginners)
 
 ## 实验内容与步骤 ##
 
@@ -615,7 +615,7 @@ plt.show()
 
 1.	本实验利用基于openface开源项目所提供的Docker容器镜像`bamos/openface`环境进行人脸识别实验。
 
-1.	<font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
+1.	<font color=#A52A2A>**注意事项**</font>【<font color=#A52A2A>`！！！重要！！！`</font>】：
 
 	在`Terminal`命令窗口中进入Docker容器内运行的所有实验代码的**工作目录**均为`/root/openface`，请把命令语句中**所有的** `your_test_image_fullpath.jpg`替换为你自己的**完整图片路径**，例如：`/home/bupt/my_pic.jpg`
 
@@ -637,7 +637,7 @@ plt.show()
 
 	![](https://i.imgur.com/ip3WtFF.png)
 
-1.	运行完以上<font color=#A52A2A>**`2`**</font>条命令进入Docker容器后，运行以下<font color=#A52A2A>**`1`**</font>条命令转至 **openface工作目录**`/root/openface` （<font color=#A52A2A>**`！！！重要！！！`**</font>）：
+1.	运行完以上<font color=#A52A2A>**`2`**</font>条命令进入Docker容器后，运行以下<font color=#A52A2A>**`1`**</font>条命令转至 **openface工作目录**`/root/openface`【<font color=#A52A2A>**`！！！重要！！！`**</font>】：
 
 	```bash
 	cd /root/openface
@@ -691,7 +691,7 @@ plt.show()
 	
 	![](https://i.imgur.com/WJRBj5Y.png)
 
-1.	<font color=#A52A2A>**注意事项**</font>（<font color=#A52A2A>`！！！重要！！！`</font>）：
+1.	<font color=#A52A2A>**注意事项**</font>【<font color=#A52A2A>`！！！重要！！！`</font>】：
 
 	-	把各个人的照片样本拷贝至<font color=#A52A2A>**与其相应**</font>的样本库文件夹，并保证每个照片样本中<font color=#A52A2A>**只有一张人脸**</font>，并清晰可见（<font color=#A52A2A>**眉/眼/鼻/嘴/脸廓**</font>完整，最好<font color=#A52A2A>**不要**</font>佩戴眼镜）。
 
