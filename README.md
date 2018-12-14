@@ -270,7 +270,7 @@ plt.show()
 
 -	查阅机器学习-无监督学习[基本原理和相关算法](http://sklearn.apachecn.org/#/docs/19)
 
--	查阅聚类基本原理及K-means[算法原理](http://sklearn.apachecn.org/#/docs/22)
+-	查阅聚类基本原理及K-Means[算法原理](http://sklearn.apachecn.org/#/docs/22)
 
 ## 实验内容与步骤 ##
 
